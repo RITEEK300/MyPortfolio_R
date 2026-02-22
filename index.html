@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RITEEK DOBLE | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <style>
+:root {
+    --accent: #f59e0b;
+    --accent-glow: rgba(245, 158, 11, 0.4);
+    --bg-dark: #020617;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #cbd5e1;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 8vw, 4.5rem);
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.hero-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ================= GLASS CARD ================= */
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.glass-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    background: rgba(245, 158, 11, 0.05);
+}
+
+/* ================= PROFILE ================= */
+
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ================= SKILLS ================= */
+
+.skill-card-sleek {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 20px 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-card-sleek:hover {
+    border-color: var(--accent);
+    background: rgba(245, 158, 11, 0.07);
+    transform: translateY(-5px);
+}
+
+.skill-card-sleek i {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* ================= TECH BADGES ================= */
+
+.badge-tech {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 4px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ================= PREMIUM HERO BUTTONS ================= */
+
+.btn-hero-main,
+.btn-call,
+.btn-hero-github,
+.btn-hero-linkedin {
+    padding: 12px 28px;
+    border-radius: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 🔥 View CV */
+.btn-hero-main {
+    background: linear-gradient(135deg, #f59e0b, #ffb703);
+    color: #000 !important;
+    border: none;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+}
+
+.btn-hero-main:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(245, 158, 11, 0.55);
+}
+
+/* 📞 Call */
+.btn-call {
+    background: rgba(245, 158, 11, 0.08);
+    color: var(--accent) !important;
+    border: 2px solid rgba(245, 158, 11, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+.btn-call:hover {
+    background: linear-gradient(135deg, #f59e0b, #ffb703);
+    color: #000 !important;
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+}
+
+/* 🐙 GitHub */
+.btn-hero-github {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-hero-github:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+/* 💼 LinkedIn */
+.btn-hero-linkedin {
+    background: linear-gradient(135deg, #0a66c2, #004182);
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 8px 20px rgba(10, 102, 194, 0.35);
+}
+
+.btn-hero-linkedin:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(10, 102, 194, 0.5);
+}
+
+/* ================= CONTACT CARD ================= */
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.contact-card:hover i {
+    color: var(--accent) !important;
+}
+
+/* ================= DIVIDERS ================= */
+
+.glow-line {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    box-shadow: 0 0 15px 1px var(--accent);
+    margin: 60px auto;
+    width: 80%;
+    opacity: 0.4;
+    position: relative;
+}
+
+.glow-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--glass-border), transparent);
+    margin: 40px 0;
+}
+
+footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 50px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-btns a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-title {
+        margin-bottom: 20px;
+    }
+
+    .skill-card-sleek i {
+        font-size: 2rem;
+    }
+
+    .btn-hero-main,
+    .btn-call,
+    .btn-hero-github,
+    .btn-hero-linkedin {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">RITEEK<span class="text-accent">.DOBLE</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link text-accent fw-bold" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-2 order-lg-1" data-aos="fade-right">
+                    <h5 class="fw-bold mb-3 text-accent" style="letter-spacing: 2px;">
+                        // JAVA DEVELOPER
+                    </h5>
+                    <h1 class="hero-title">RITEEK <span class="text-accent">DOBLE</span></h1>
+                    <p class="lead text-secondary mb-4">Java Developer with strong fundamentals in OOP, SQL, and Spring
+                        Boot. I specialize in building robust backend architectures and scalable REST APIs.</p>
+
+                   <div class="d-flex flex-wrap gap-3">
+
+    <!-- View CV -->
+    <a href="resume.html" class="btn-hero-main">
+        <i class="fas fa-file-pdf me-2"></i>View CV
+    </a>
+
+    <!-- Call Button -->
+    <a href="tel:+918103941424" class="btn-call">
+        <i class="fas fa-phone-alt me-2"></i>Call Me
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/RITEEK300" target="_blank" class="btn-hero-github">
+        <i class="fab fa-github me-2"></i>GitHub
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/riteek-doble-1376402bb/" target="_blank" class="btn-hero-linkedin">
+        <i class="fab fa-linkedin me-2"></i>LinkedIn
+    </a>
+
+</div>
+                </div>
+
+                <div class="col-lg-5 order-1 order-lg-2 text-center" data-aos="zoom-in">
+                    <div class="profile-wrapper">
+                        <div class="glass-card d-inline-block p-2 rounded-circle">
+                            <img src="/img/portfolio_pic.jpeg" class="rounded-circle profile-img" alt="Riteek Doble">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="glow-line" data-aos="fade-in"></div>
+
+    <div class="container mt-5">
+    </div>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="hero-title mb-0" style="font-size: 2.2rem;">About & <span class="text-info">Education</span>
+                </h2>
+                <div class="bg-info mx-auto mt-3" style="width: 50px; height: 4px; border-radius: 10px;"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="glass-card h-100" style="border-top: 3px solid var(--accent);">
+                        <i class="fas fa-user mb-3 text-accent fs-1"></i>
+                        <h4 class="text-white fw-bold">Who am I?</h4>
+                        <p class="text-secondary">Final-year <span class="text-accent fw-bold">B.Tech IT</span> student
+                            at Technocrats Institute of Technology, Bhopal. I focus on building scalable, secure, and
+                            maintainable backend systems.</p>
+                        <div class="mt-auto">
+                            <p class="mb-0 text-white">Current CGPA: <strong class="text-accent fs-4">7.95</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card h-100" style="border-top: 3px solid #00a4ef;">
+                        <i class="fas fa-graduation-cap mb-3 text-info fs-1"></i>
+                        <h4 class="text-white fw-bold">Education Journey</h4>
+                        <p class="mb-1 text-info fw-bold">B.Tech (IT) | 2021 - 2025</p>
+                        <p class="text-secondary small">Technocrats Institute of Technology, Bhopal</p>
+                        <hr class="opacity-10 border-light">
+                        <p class="mb-1 text-white fw-bold">Higher Secondary</p>
+                        <p class="text-secondary small">Science (PCM) • <span class="text-info">MP Board</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="glow-line" data-aos="fade-in"></div>
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="hero-title" style="font-size: 2.2rem;">Technical <span
+                        style="color: var(--accent);">Arsenal</span></h2>
+                <div style="width: 50px; height: 3px; background: var(--accent); margin: 10px auto;"></div>
+            </div>
+
+            <div class="row g-3 g-md-4 justify-content-center">
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-java-plain colored"></i>
+                        <h6>Java SE/EE</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-spring-plain colored"></i>
+                        <h6>Spring Boot</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-python-plain colored"></i>
+                        <h6>Python</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <h6>MySQL</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-react-original colored"></i>
+                        <h6>React.js</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <h6>JavaScript</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-git-plain colored"></i>
+                        <h6>Git & GitHub</h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-3" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="skill-card-sleek">
+                        <i class="devicon-docker-plain colored"></i>
+                        <h6>Docker</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="glow-line" data-aos="fade-in"></div>
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="text-white hero-title" style="font-size: 2.2rem;">Featured <span
+                        style="color: var(--accent);">Projects</span></h2>
+                <div
+                    style="width: 50px; height: 4px; background: var(--accent); margin: 15px auto; border-radius: 10px;">
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6" data-aos="fade-up">
+                    <div class="glass-card d-flex flex-column h-100" style="border-top: 3px solid #ffa116;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-graduation-cap fs-2" style="color: #ffa116;"></i>
+                            <a href="https://github.com/RITEEK300/online-learning-platform" target="_blank"
+                                class="text-white-50">
+                                <i class="fab fa-github fs-3"></i>
+                            </a>
+                        </div>
+                        <h4 class="fw-bold text-white">Online Learning Platform</h4>
+                        <p class="text-secondary small flex-grow-1">A full-stack LMS with course management and secure
+                            authentication. Optimized for high-traffic student portals.</p>
+                        <div class="mt-3">
+                            <span class="badge-tech"
+                                style="color: #ffa116; border: 1px solid rgba(255, 161, 22, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">Java</span>
+                            <span class="badge-tech"
+                                style="color: #ffa116; border: 1px solid rgba(255, 161, 22, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">Spring
+                                Boot</span>
+                            <span class="badge-tech"
+                                style="color: #ffa116; border: 1px solid rgba(255, 161, 22, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px;">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card d-flex flex-column h-100" style="border-top: 3px solid #00a4ef;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-chart-line fs-2" style="color: #00a4ef;"></i>
+                            <a href="https://github.com/RITEEK300/covid-data-visualization" target="_blank"
+                                class="text-white-50">
+                                <i class="fab fa-github fs-3"></i>
+                            </a>
+                        </div>
+                        <h4 class="fw-bold text-white">COVID Data Visualization</h4>
+                        <p class="text-secondary small flex-grow-1">Web app to display COVID-19 data using public APIs.
+                            Visualizes statistics graphically for better insights using Google Charts.</p>
+                        <div class="mt-3">
+                            <span class="badge-tech"
+                                style="color: #00a4ef; border: 1px solid rgba(0, 164, 239, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">JavaScript</span>
+                            <span class="badge-tech"
+                                style="color: #00a4ef; border: 1px solid rgba(0, 164, 239, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">API</span>
+                            <span class="badge-tech"
+                                style="color: #00a4ef; border: 1px solid rgba(0, 164, 239, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px;">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card d-flex flex-column h-100" style="border-top: 3px solid #34a853;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-shopping-cart fs-2" style="color: #34a853;"></i>
+                            <a href="https://github.com/RITEEK300/e-commerce-rest-api" target="_blank"
+                                class="text-white-50">
+                                <i class="fab fa-github fs-3"></i>
+                            </a>
+                        </div>
+                        <h4 class="fw-bold text-white">E-Commerce REST API</h4>
+                        <p class="text-secondary small flex-grow-1">Backend for a shopping platform with product catalog
+                            and JWT security. Built for scalable operations with PostgreSQL.</p>
+                        <div class="mt-3">
+                            <span class="badge-tech"
+                                style="color: #34a853; border: 1px solid rgba(52, 168, 83, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">Spring
+                                Boot</span>
+                            <span class="badge-tech"
+                                style="color: #34a853; border: 1px solid rgba(52, 168, 83, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">JWT</span>
+                            <span class="badge-tech"
+                                style="color: #34a853; border: 1px solid rgba(52, 168, 83, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px;">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card d-flex flex-column h-100" style="border-top: 3px solid var(--accent);">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <i class="fas fa-tasks fs-2" style="color: var(--accent);"></i>
+                            <a href="https://github.com/RITEEK300/task-management-tool" target="_blank"
+                                class="text-white-50">
+                                <i class="fab fa-github fs-3"></i>
+                            </a>
+                        </div>
+                        <h4 class="fw-bold text-white">Task Management Tool</h4>
+                        <p class="text-secondary small flex-grow-1">Productivity app to manage daily workflows with
+                            deadlines. Built with focus on usability, Hibernate, and Java Swing.</p>
+                        <div class="mt-3">
+                            <span class="badge-tech"
+                                style="color: var(--accent); border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">Java</span>
+                            <span class="badge-tech"
+                                style="color: var(--accent); border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 5px;">Hibernate</span>
+                            <span class="badge-tech"
+                                style="color: var(--accent); border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 8px; border-radius: 5px; font-size: 12px;">Swing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="glow-line" data-aos="fade-in"></div>
+    <div class="container" style="margin-top: 100px; margin-bottom: 50px;">
+    </div>
+
+    <section id="contact" class="contact-section mt-5 pb-0">
+        <div class="container pb-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title text-white" style="font-size: 1.8rem; letter-spacing: 1px;">Let's <span
+                        style="color: var(--accent);">Connect</span></h2>
+            </div>
+
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <a href="mailto:riteekdoble@email.com" class="contact-card d-block text-center p-3">
+                        <div class="brand-logo mb-2">
+                            <i class="fas fa-envelope fs-2" style="color: #cbd5e0;"></i>
+                        </div>
+                        <h6 class="text-white mb-1">Email</h6>
+                        <span class="text-secondary" style="font-size: 0.75rem;">riteekdoble@email.com</span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://linkedin.com/in/riteekdoble" target="_blank"
+                        class="contact-card d-block text-center p-3">
+                        <div class="brand-logo mb-2">
+                            <i class="fab fa-linkedin-in fs-2" style="color: #cbd5e0;"></i>
+                        </div>
+                        <h6 class="text-white mb-1">LinkedIn</h6>
+                        <span class="text-secondary" style="font-size: 0.75rem;">linkedin/in/riteek</span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://github.com/riteekdoble" target="_blank"
+                        class="contact-card d-block text-center p-3">
+                        <div class="brand-logo mb-2">
+                            <i class="fab fa-github fs-2" style="color: #cbd5e0;"></i>
+                        </div>
+                        <h6 class="text-white mb-1">GitHub</h6>
+                        <span class="text-secondary" style="font-size: 0.75rem;">github/riteekdoble</span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <a href="https://twitter.com/riteekdoble" target="_blank"
+                        class="contact-card d-block text-center p-3">
+                        <div class="brand-logo mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#cbd5e0"
+                                class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633z" />
+                            </svg>
+                        </div>
+                        <h6 class="text-white mb-1">Twitter</h6>
+                        <span class="text-secondary" style="font-size: 0.75rem;">@riteekdoble</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3"
+        style="background: rgba(0,0,0,0.4); border-top: 1px solid rgba(255,255,255,0.05); margin-top: -10px;">
+        <div class="container text-center">
+            <p class="text-white-50 small mb-0">© 2024 Riteek Doble | Java Full Stack Developer</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>
