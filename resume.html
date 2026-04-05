@@ -19,67 +19,66 @@
         }
 
         .a4-page {
-            width: 210mm;
+            width: 220mm; 
             min-height: 297mm;
             background: white;
             display: grid;
-            grid-template-columns: 280px 1fr;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+            grid-template-columns: 295px 1fr;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
 
-        /* DARK GRADIENT SIDEBAR */
         .sidebar {
             background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
             color: #f8fafc;
-            padding: 45px 25px;
+            padding: 60px 25px 40px 25px;
             border-right: 1px solid rgba(255,255,255,0.1);
         }
 
         .main-content {
-            padding: 45px 35px;
+            padding: 60px 35px 40px 35px;
             background-color: #ffffff;
         }
 
-        /* UNIFORM SIDEBAR BOXES */
         .sidebar-box {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 18px;
-            margin-bottom: 18px;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
         }
 
-        /* MAIN CONTENT BENTO BOXES */
         .bento-box {
             background: #ffffff;
-            border: 2px solid #f1f5f9;
-            border-radius: 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 12 rgba(0, 0, 0, 0.03);
         }
 
         .section-label {
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #818cf8;
+            letter-spacing: 2px;
+            color: #4f46e5;
             margin-bottom: 12px;
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .skill-tag {
-            background: #f8fafc;
-            color: #334155;
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 11px;
-            font-weight: 600;
+            background: #f1f5f9;
+            color: #1e293b;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 700;
             margin: 2px;
             display: inline-block;
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
         }
 
         .sidebar-title {
@@ -88,7 +87,7 @@
             color: #94a3b8;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: block;
         }
 
@@ -105,161 +104,142 @@
     
     <aside class="sidebar">
         <div class="mb-10 text-center">
-            <h1 class="text-4xl font-extrabold tracking-tighter leading-none text-white">RITEEK<br><span class="text-indigo-400">DOBLE</span></h1>
-            <div class="h-1 w-10 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
+            <h1 class="text-3xl font-extrabold tracking-tighter text-white whitespace-nowrap">
+                RITEEK <span class="text-indigo-400">DOBLE</span>
+            </h1>
+            <div class="h-1.5 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
             <p class="text-indigo-300 text-[10px] mt-4 font-bold uppercase tracking-widest">Java Backend Developer</p>
         </div>
 
         <div class="sidebar-box">
-            <span class="sidebar-title">Connect</span>
+            <span class="sidebar-title">Contact</span>
             <div class="space-y-3 text-[11px] text-slate-300">
-                <p class="flex items-center gap-3">
-                    <i class="bi bi-envelope-at-fill text-indigo-400"></i> 
-                    pawarriteek78@gmail.com
-                </p>
-                <p class="flex items-center gap-3">
-                    <i class="bi bi-github text-indigo-400"></i> 
-                    RITEEK300
-                </p>
-                <p class="flex items-center gap-3">
-                    <i class="bi bi-geo-alt-fill text-indigo-400"></i> 
-                    Indore, MP
-                </p>
-            </div>
-        </div>
-
-        <div class="sidebar-box text-center border-indigo-500/30">
-            <span class="sidebar-title !text-indigo-400">Problem Solving</span>
-            <p class="text-3xl font-black text-white leading-none mt-2">350+</p>
-            <p class="text-[10px] text-indigo-100 opacity-70 mt-2">GFG & LeetCode</p>
-            <div class="mt-2 w-full bg-white/10 h-1 rounded-full overflow-hidden">
-                <div class="bg-indigo-500 h-full w-[85%]"></div>
+                <p class="flex items-center gap-3"><i class="bi bi-telephone-fill text-indigo-400"></i> +91 8103941424</p>
+                <p class="flex items-center gap-3"><i class="bi bi-envelope-at-fill text-indigo-400"></i> pawarriteek78@gmail.com</p>
+                <p class="flex items-center gap-3"><i class="bi bi-geo-alt-fill text-indigo-400"></i> Indore, MP</p>
+                <div class="pt-2 flex justify-around text-lg">
+                    <a href="#"><i class="bi bi-github text-white hover:text-indigo-400"></i></a>
+                    <a href="#"><i class="bi bi-linkedin text-white hover:text-indigo-400"></i></a>
+                    <a href="#"><i class="bi bi-globe text-white hover:text-indigo-400"></i></a>
+                </div>
             </div>
         </div>
 
         <div class="sidebar-box">
             <span class="sidebar-title">Education</span>
-            <div class="text-[12px]">
-                <p class="font-bold text-white">B.Tech in IT</p>
-                <p class="text-slate-400 text-[10px] mt-0.5">Technocrats Inst. Bhopal</p>
-                <p class="text-indigo-400 font-bold mt-2 text-[10px]">2021 - 2025 | 7.95 CGPA</p>
+            <div class="space-y-4">
+                <div>
+                    <p class="font-bold text-white text-[13px]">B.Tech in IT</p>
+                    <p class="text-slate-400 text-[10px]">Technocrats Inst., Bhopal</p>
+                    <p class="text-indigo-400 font-bold text-[10px] mt-1">2021 - 2025 | 7.95 CGPA</p>
+                </div>
+                <div class="pt-2 border-t border-white/10">
+                    <p class="font-bold text-white text-[13px]">Higher Secondary (12th)</p>
+                    <p class="text-slate-400 text-[10px]">SSV Mandir, Pandhurna</p>
+                    <p class="text-indigo-400 font-bold text-[10px] mt-1">Class of 2021 | 81%</p>
+                </div>
             </div>
+        </div>
+
+        <div class="sidebar-box text-center border-indigo-500/40">
+            <span class="sidebar-title !text-indigo-400">Problem Solving</span>
+            <p class="text-4xl font-black text-white leading-none mt-2">300+</p>
+            <p class="text-[10px] text-indigo-100 opacity-70 mt-3">LeetCode & GFG Problems</p>
         </div>
 
         <div class="sidebar-box">
-            <span class="sidebar-title">Certifications</span>
-            <div class="space-y-4">
-                <div class="flex gap-3 items-start">
-                    <i class="bi bi-shield-lock-fill text-indigo-400"></i>
-                    <p class="text-[10px] text-slate-300 leading-snug"><span class="text-white font-semibold">Advanced Java</span><br>Industrial Training</p>
-                </div>
-                <div class="flex gap-3 items-start">
-                    <i class="bi bi-shield-lock-fill text-indigo-400"></i>
-                    <p class="text-[10px] text-slate-300 leading-snug"><span class="text-white font-semibold">Full Stack Dev</span><br>Spring Ecosystem</p>
-                </div>
+            <span class="sidebar-title">Achievements</span>
+            <div class="space-y-3 text-[10px] text-slate-300">
+                <p class="flex gap-2"><i class="bi bi-award text-indigo-400"></i> Gen-AI & Prompt Engineering</p>
+                <p class="flex gap-2"><i class="bi bi-award text-indigo-400"></i> Java & Spring Boot Dev</p>
             </div>
         </div>
 
-        <div class="sidebar-box mb-0">
-            <span class="sidebar-title">Languages</span>
-            <div class="flex gap-2">
-                <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-slate-300">English</span>
-                <span class="text-[10px] bg-white/10 px-2 py-1 rounded text-slate-300">Hindi</span>
+        <div class="sidebar-box border-indigo-500/20 bg-indigo-950/20">
+            <span class="sidebar-title !text-indigo-400">Strengths</span>
+            <div class="flex flex-wrap gap-2 text-[9px] font-bold text-slate-300 uppercase tracking-tight">
+                <span class="bg-white/5 px-2 py-1 rounded">Problem Solving</span> 
+                <span class="bg-white/5 px-2 py-1 rounded">Clean Code</span> 
+                <span class="bg-white/5 px-2 py-1 rounded">Quick Learner</span> 
+                <span class="bg-white/5 px-2 py-1 rounded">Adaptable</span>
             </div>
         </div>
     </aside>
 
     <main class="main-content">
         
-        <div class="bento-box border-indigo-50 bg-indigo-50/10">
-            <span class="section-label text-indigo-600">Executive Summary</span>
+        <div class="bento-box border-l-4 border-l-indigo-500 bg-indigo-50/10">
+            <span class="section-label"><i class="bi bi-person-badge"></i> Summary</span>
             <p class="text-[13px] leading-relaxed text-slate-600">
-                Highly motivated Developer specializing in <strong>Java 21</strong> and the <strong>Spring ecosystem</strong>. Experienced in building secure RESTful APIs, optimizing <strong>MySQL/PostgreSQL</strong> databases, and deploying applications on <strong>AWS Cloud</strong>. Strong focus on DSA and clean code.
+                Java Backend Developer with strong expertise in <strong>Java, Spring Boot, and RESTful API</strong> development. Experienced in building full-stack web applications and AI-based solutions. Strong foundation in <strong>DSA, OOP, and database design</strong>, with a focus on writing clean, scalable, and efficient code.
             </p>
         </div>
 
-        <div class="mb-4">
-            <span class="section-label">Technical Stack</span>
-            
-            <div class="grid grid-cols-1 gap-3">
-                <div class="bento-box !mb-0">
-                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-3">Core & Backend</p>
+        <div class="mb-6">
+            <span class="section-label"><i class="bi bi-cpu-fill"></i> Technical Expertise</span>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bento-box !mb-0 border-l-4 border-l-indigo-600">
+                    <p class="text-[10px] font-extrabold text-slate-800 uppercase mb-3">Backend & Logic</p>
                     <div class="flex flex-wrap">
-                        <span class="skill-tag">Java 21 (LTS)</span>
+                        <span class="skill-tag">Java</span>
                         <span class="skill-tag">Spring Boot</span>
                         <span class="skill-tag">Hibernate/JPA</span>
-                        <span class="skill-tag">Spring Security</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">JUnit 5</span>
+                        <span class="skill-tag">Security</span>
                     </div>
                 </div>
-
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="bento-box !mb-0">
-                        <p class="text-[9px] font-bold text-slate-400 uppercase mb-3">Databases</p>
-                        <div class="flex flex-wrap">
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                    <div class="bento-box !mb-0">
-                        <p class="text-[9px] font-bold text-slate-400 uppercase mb-3">Cloud & Tools</p>
-                        <div class="flex flex-wrap">
-                            <span class="skill-tag">AWS EC2/S3</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Git</span>
-                        </div>
+                <div class="bento-box !mb-0 border-l-4 border-l-cyan-600">
+                    <p class="text-[10px] font-extrabold text-slate-800 uppercase mb-3">Databases</p>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">DBMS</span>
                     </div>
                 </div>
-
-                <div class="bento-box !mb-0">
-                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-3">Frontend & Utils</p>
+                <div class="bento-box !mb-0 border-l-4 border-l-blue-600">
+                    <p class="text-[10px] font-extrabold text-slate-800 uppercase mb-3">Tools & Core</p>
+                    <div class="flex flex-wrap">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">DSA</span>
+                        <span class="skill-tag">OOP</span>
+                    </div>
+                </div>
+                <div class="bento-box !mb-0 border-l-4 border-l-orange-500">
+                    <p class="text-[10px] font-extrabold text-slate-800 uppercase mb-3">Web & Frontend</p>
                     <div class="flex flex-wrap">
                         <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Linux/Bash</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div>
-            <span class="section-label">Top Projects</span>
+            <span class="section-label"><i class="bi bi-code-square"></i> Key Projects</span>
             
-            <div class="bento-box">
+            <div class="bento-box border-l-4 border-l-emerald-500">
                 <div class="flex justify-between items-center mb-2">
-                    <h3 class="font-bold text-slate-900 text-sm">Student Management System</h3>
-                    <span class="text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-bold">AWS DEPLOYED</span>
+                    <h3 class="font-bold text-slate-900 text-sm">Online Learning Platform</h3>
+                    <span class="text-[9px] bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-bold border border-emerald-200 uppercase">Spring Boot</span>
                 </div>
-                <p class="text-[10px] text-indigo-600 font-bold mb-3">Spring Boot | MySQL | AWS EC2</p>
-                <ul class="text-[12px] text-slate-600 space-y-2">
-                    <li class="flex items-start gap-2">
-                        <i class="bi bi-check2-circle text-indigo-500 mt-1"></i>
-                        <span>Deployed a robust student tracking system on <strong>AWS</strong> with persistent storage.</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="bi bi-check2-circle text-indigo-500 mt-1"></i>
-                        <span>Optimized SQL queries reducing response time by <strong>40%</strong>.</span>
-                    </li>
+                <ul class="text-[12px] text-slate-600 space-y-1 ml-4 list-disc">
+                    <li>Developed full-stack application for course management and admin operations.</li>
+                    <li>Implemented role-based authorization using <strong>Spring Security</strong>.</li>
+                    <li>Optimized SQL queries, improving application performance by <strong>20%</strong>.</li>
                 </ul>
             </div>
 
-            <div class="bento-box">
+            <div class="bento-box border-l-4 border-l-indigo-500">
                 <div class="flex justify-between items-center mb-2">
-                    <h3 class="font-bold text-slate-900 text-sm">AI Content Assistant</h3>
-                    <span class="text-[9px] bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full font-bold">API INTEGRATION</span>
+                    <h3 class="font-bold text-slate-900 text-sm">Smart AI Email Assistant</h3>
+                    <span class="text-[9px] bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold border border-indigo-200 uppercase">GEN-AI</span>
                 </div>
-                <p class="text-[10px] text-indigo-600 font-bold mb-3">Java 21 | Spring Boot | React | Gemini API</p>
-                <ul class="text-[12px] text-slate-600 space-y-2">
-                    <li class="flex items-start gap-2">
-                        <i class="bi bi-check2-circle text-indigo-500 mt-1"></i>
-                        <span>Built an automation tool using <strong>Gen-AI</strong> for professional mail generation.</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="bi bi-check2-circle text-indigo-500 mt-1"></i>
-                        <span>Connected React frontend with secure Spring Boot REST endpoints.</span>
-                    </li>
+                <ul class="text-[12px] text-slate-600 space-y-1 ml-4 list-disc">
+                    <li>Developed AI-based email assistant using <strong>Google Gemini API</strong>.</li>
+                    <li>Built <strong>RESTful APIs</strong> for real-time request processing.</li>
+                    <li>Automated email drafting, significantly improving user productivity.</li>
                 </ul>
             </div>
         </div>
