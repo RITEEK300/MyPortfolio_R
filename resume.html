@@ -14,30 +14,44 @@
             background-color: #cbd5e1;
             display: flex;
             justify-content: center;
-            padding: 40px 0;
+            padding: 0;
             margin: 0;
         }
 
+        /* Responsive Wrapper */
         .a4-page {
-            width: 220mm; 
-            min-height: 297mm;
+            width: 100%; /* Mobile pe full width */
+            max-width: 210mm; /* Laptop pe A4 width */
+            min-height: 100vh;
             background: white;
             display: grid;
-            grid-template-columns: 295px 1fr;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            grid-template-columns: 1fr; /* Default: Single column for mobile */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Desktop Layout (Laptop screen pe 2 columns) */
+        @media (min-width: 768px) {
+            .a4-page {
+                grid-template-columns: 280px 1fr;
+                margin: 40px 0;
+                min-height: 297mm;
+            }
         }
 
         .sidebar {
             background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
             color: #f8fafc;
-            padding: 60px 25px 40px 25px;
-            border-right: 1px solid rgba(255,255,255,0.1);
+            padding: 40px 20px;
         }
 
         .main-content {
-            padding: 60px 35px 40px 35px;
+            padding: 30px 20px;
             background-color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar { padding: 60px 25px; }
+            .main-content { padding: 60px 35px; }
         }
 
         .sidebar-box {
@@ -54,7 +68,7 @@
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 12 rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
         .section-label {
@@ -91,10 +105,24 @@
             display: block;
         }
 
+        /* Desktop specific grid for tech expertise */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        @media (min-width: 550px) {
+            .tech-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media print {
             body { background: none; padding: 0; }
-            .a4-page { box-shadow: none; width: 100%; border: none; }
-            .sidebar { -webkit-print-color-adjust: exact; }
+            .a4-page { 
+                box-shadow: none; 
+                width: 210mm; 
+                grid-template-columns: 280px 1fr;
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -104,7 +132,7 @@
     
     <aside class="sidebar">
         <div class="mb-10 text-center">
-            <h1 class="text-3xl font-extrabold tracking-tighter text-white whitespace-nowrap">
+            <h1 class="text-3xl font-extrabold tracking-tighter text-white">
                 RITEEK <span class="text-indigo-400">DOBLE</span>
             </h1>
             <div class="h-1.5 w-12 bg-indigo-500 mx-auto mt-4 rounded-full"></div>
@@ -154,16 +182,6 @@
                 <p class="flex gap-2"><i class="bi bi-award text-indigo-400"></i> Java & Spring Boot Dev</p>
             </div>
         </div>
-
-        <div class="sidebar-box border-indigo-500/20 bg-indigo-950/20">
-            <span class="sidebar-title !text-indigo-400">Strengths</span>
-            <div class="flex flex-wrap gap-2 text-[9px] font-bold text-slate-300 uppercase tracking-tight">
-                <span class="bg-white/5 px-2 py-1 rounded">Problem Solving</span> 
-                <span class="bg-white/5 px-2 py-1 rounded">Clean Code</span> 
-                <span class="bg-white/5 px-2 py-1 rounded">Quick Learner</span> 
-                <span class="bg-white/5 px-2 py-1 rounded">Adaptable</span>
-            </div>
-        </div>
     </aside>
 
     <main class="main-content">
@@ -177,7 +195,7 @@
 
         <div class="mb-6">
             <span class="section-label"><i class="bi bi-cpu-fill"></i> Technical Expertise</span>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="tech-grid">
                 <div class="bento-box !mb-0 border-l-4 border-l-indigo-600">
                     <p class="text-[10px] font-extrabold text-slate-800 uppercase mb-3">Backend & Logic</p>
                     <div class="flex flex-wrap">
@@ -220,19 +238,19 @@
             <span class="section-label"><i class="bi bi-code-square"></i> Key Projects</span>
             
             <div class="bento-box border-l-4 border-l-emerald-500">
-                <div class="flex justify-between items-center mb-2">
+                <div class="flex flex-wrap justify-between items-center mb-2 gap-2">
                     <h3 class="font-bold text-slate-900 text-sm">Online Learning Platform</h3>
                     <span class="text-[9px] bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-bold border border-emerald-200 uppercase">Spring Boot</span>
                 </div>
                 <ul class="text-[12px] text-slate-600 space-y-1 ml-4 list-disc">
                     <li>Developed full-stack application for course management and admin operations.</li>
                     <li>Implemented role-based authorization using <strong>Spring Security</strong>.</li>
-                    <li>Optimized SQL queries, improving application performance by <strong>20%</strong>.</li>
+                    <li>Optimized SQL queries, improving performance by <strong>20%</strong>.</li>
                 </ul>
             </div>
 
             <div class="bento-box border-l-4 border-l-indigo-500">
-                <div class="flex justify-between items-center mb-2">
+                <div class="flex flex-wrap justify-between items-center mb-2 gap-2">
                     <h3 class="font-bold text-slate-900 text-sm">Smart AI Email Assistant</h3>
                     <span class="text-[9px] bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold border border-indigo-200 uppercase">GEN-AI</span>
                 </div>
